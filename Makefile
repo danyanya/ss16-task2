@@ -1,9 +1,9 @@
 CC=g++
 MPICPP=mpic++
 MPICXX=mpicxx
-CFLAGS=-c -Wall -std=c++0x -fopenmp
+CFLAGS=-c -Wall -std=c++0x -Ofast -fopenmp -DDEBUG
 LDFLAGS=-lm -lgomp 
-SOURCES=src/main.cpp
+SOURCES=src/main.cpp src/solver.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=task2-solver
 
